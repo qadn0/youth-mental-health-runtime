@@ -31,6 +31,7 @@ sentence-transformers = "2.0.0"
 spacy = "3.7.5"
 tqdm = "4.66.*"
 transformers = "4.44.2"
+xgboost = "2.1.1"
 
 # CPU DEPENDENCIES
 [feature.cpu]
@@ -56,6 +57,9 @@ xformers = {version = "0.0.23.post1", channel = "xformers"}
 extra-index-urls = ["https://download.pytorch.org/whl/cu118"]
 [feature.gpu.pypi-dependencies]
 lmdeploy = {url = "https://github.com/InternLM/lmdeploy/releases/download/v0.6.0/lmdeploy-0.6.0+cu118-cp310-cp310-manylinux2014_x86_64.whl"}
+[feature.gpu.tasks]
+postinstall = "pip install --no-deps"
+
 
 [environments]
 cpu = { features = ["base", "cpu"]}
