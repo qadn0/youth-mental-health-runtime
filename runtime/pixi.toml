@@ -4,7 +4,7 @@ channels = ["nvidia", "conda-forge", "pytorch", "xformers"]
 platforms = ["linux-64"]
 
 [tasks]
-postinstall = "pip install --no-build-isolation --no-deps --disable-pip-version-check -e ."
+postinstall = "pip install --no-deps"
 
 [dependencies]
 
