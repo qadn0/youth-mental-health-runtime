@@ -56,9 +56,13 @@ system-requirements = {cuda = "11.8"}
 bitsandbytes = { version = "0.43.3", build="cuda118_py310hda4ad70_1" }
 cudatoolkit = {version = "11.8", channel = "conda-forge"}
 cuda-cudart = {version = "11.8.*", channel = "nvidia"}
+cuda-runtime = {version = "11.8.*", channel = "nvidia"}
 cuda-version = {version = "11.8", channel = "conda-forge"}
 cudnn = {version = "*", channel = "conda-forge"}
 cupy = {version = "12.*"}
+libcublas = {version = "11.11.*", channel = "nvidia"}
+libcurand = {version = "10.3.*", channel = "nvidia"}
+nccl = {version = "2.21.*", channel = "conda-forge"}
 pytorch = {version = "2.1.2", channel = "pytorch"}
 pytorch-cuda = {version = "11.8", channel = "pytorch"} # PyTorch metapackage for cuda version
 torchvision = {version = "0.16.2", channel = "pytorch"}
@@ -67,10 +71,6 @@ xformers = {version = "0.0.23.post1", channel = "xformers"}
 [feature.gpu.pypi-options]
 extra-index-urls = ["https://download.pytorch.org/whl/cu118"]
 [feature.gpu.pypi-dependencies]
-nvidia-nccl-cu11 = {version = "==2.21.5"}
-nvidia-cuda-runtime-cu11 = {version = "==11.8.89"}
-nvidia-cublas-cu11 = {version = "==11.11.3.6"}
-nvidia-curand-cu11 = {version = "==10.3.0.86"}
 lmdeploy = {url = "https://github.com/InternLM/lmdeploy/releases/download/v0.6.0/lmdeploy-0.6.0+cu118-cp310-cp310-manylinux2014_x86_64.whl"}
 
 [environments]
