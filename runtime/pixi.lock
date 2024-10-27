@@ -302,7 +302,6 @@ environments:
     - url: https://conda.anaconda.org/xformers/
     indexes:
     - https://pypi.org/simple
-    - https://download.pytorch.org/whl/cu118
     packages:
       linux-64:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
@@ -537,7 +536,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/multiprocess-0.70.15-py310h2372a71_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/murmurhash-1.0.10-py310hc6cd4ac_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/mypy_extensions-1.0.0-pyha770c72_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/nccl-2.21.5.1-h6103f9b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.5-he02047a_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/nest-asyncio-1.6.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/nettle-3.9.1-h7ab15ed_0.conda
@@ -677,12 +675,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.23.0-py310h64cae3c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.6-ha6fb4c9_0.conda
       - pypi: https://files.pythonhosted.org/packages/6a/00/b08f23b7d7e1e14ce01419a467b583edbb93c6cdb8654e54a9cc579cd61f/addict-2.4.0-py3-none-any.whl
-      - pypi: direct+https://github.com/InternLM/lmdeploy/releases/download/v0.6.0/lmdeploy-0.6.0+cu118-cp310-cp310-manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/75/84/3b1730bb21d67487c7cfcd175e44920f34b031bb313ad183398ea182535e/mmengine_lite-0.10.5-py3-none-any.whl
-      - pypi: https://download.pytorch.org/whl/cu118/nvidia_cublas_cu11-11.11.3.6-py3-none-manylinux1_x86_64.whl#sha256=39fb40e8f486dd8a2ddb8fdeefe1d5b28f5b99df01c87ab3676f057a74a5a6f3
-      - pypi: https://download.pytorch.org/whl/cu118/nvidia_cuda_runtime_cu11-11.8.89-py3-none-manylinux1_x86_64.whl#sha256=f587bd726eb2f7612cf77ce38a2c1e65cf23251ff49437f6161ce0d647f64f7c
-      - pypi: https://download.pytorch.org/whl/cu118/nvidia_curand_cu11-10.3.0.86-py3-none-manylinux1_x86_64.whl#sha256=ac439548c88580269a1eb6aeb602a5aed32f0dbb20809a31d9ed7d01d77f6bf5
-      - pypi: https://download.pytorch.org/whl/cu118/nvidia_nccl_cu11-2.21.5-py3-none-manylinux2014_x86_64.whl#sha256=49d8350629c7888701d1fd200934942671cb5c728f49acc5a0b3a768820bed29
       - pypi: https://files.pythonhosted.org/packages/3c/a6/bc1012356d8ece4d66dd75c4b9fc6c1f6650ddd5991e421177d9f8f671be/platformdirs-4.3.6-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/66/c9/d4b03b2490107f13ebd68fe9496d41ae41a7de6275ead56d0d4621b11ffd/yapf-0.40.2-py3-none-any.whl
 packages:
@@ -715,19 +708,6 @@ packages:
   purls: []
   size: 5744
   timestamp: 1650742457817
-- kind: conda
-  name: _py-xgboost-mutex
-  version: '2.0'
-  build: cpu_0
-  build_number: 1
-  subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/_py-xgboost-mutex-2.0-cpu_0.tar.bz2
-  sha256: 504b46c85d81269b24e7b22309064886cfc873955e77daf0eb794d8e7ec8cc06
-  md5: 23b8f98a355030331f40d0245492f715
-  license: Apache-2.0
-  license_family: APACHE
-  size: 7938
-  timestamp: 1538887428262
 - kind: conda
   name: _py-xgboost-mutex
   version: '2.0'
@@ -4708,24 +4688,6 @@ packages:
   - libstdcxx >=13
   license: Apache-2.0
   license_family: APACHE
-  size: 3197061
-  timestamp: 1727635479085
-- kind: conda
-  name: libxgboost
-  version: 2.1.1
-  build: cpu_h3a1dfae_4
-  build_number: 4
-  subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/libxgboost-2.1.1-cpu_h3a1dfae_4.conda
-  sha256: 40b4516bb38573d5ed5faf8ad06a2025b236a91fa90378d673423c133b916831
-  md5: 969bd1ddaeb46c471b0956ea2ea8994e
-  depends:
-  - __glibc >=2.17,<3.0.a0
-  - _openmp_mutex >=4.5
-  - libgcc >=13
-  - libstdcxx >=13
-  license: Apache-2.0
-  license_family: APACHE
   purls: []
   size: 3197061
   timestamp: 1727635479085
@@ -4891,84 +4853,6 @@ packages:
   - pkg:pypi/llvmlite?source=conda-forge-mapping
   size: 3374085
   timestamp: 1718324339305
-- kind: pypi
-  name: lmdeploy
-  version: 0.6.0
-  url: direct+https://github.com/InternLM/lmdeploy/releases/download/v0.6.0/lmdeploy-0.6.0+cu118-cp310-cp310-manylinux2014_x86_64.whl
-  requires_dist:
-  - accelerate>=0.29.3
-  - einops
-  - fastapi
-  - fire
-  - mmengine-lite
-  - numpy<2.0.0
-  - openai
-  - outlines
-  - peft<=0.11.1
-  - pillow
-  - protobuf
-  - pydantic>2.0.0
-  - pynvml
-  - safetensors
-  - sentencepiece
-  - shortuuid
-  - tiktoken
-  - torch<=2.3.1,>=2.0.0
-  - torchvision<=0.18.1,>=0.15.0
-  - transformers
-  - uvicorn
-  - nvidia-nccl-cu11
-  - nvidia-cuda-runtime-cu11
-  - nvidia-cublas-cu11
-  - nvidia-curand-cu11
-  - triton<=2.3.1,>=2.1.0 ; sys_platform == 'linux'
-  - pybind11<=2.13.1 ; extra == 'all'
-  - setuptools ; extra == 'all'
-  - accelerate>=0.29.3 ; extra == 'all'
-  - einops ; extra == 'all'
-  - fastapi ; extra == 'all'
-  - fire ; extra == 'all'
-  - mmengine-lite ; extra == 'all'
-  - numpy<2.0.0 ; extra == 'all'
-  - openai ; extra == 'all'
-  - outlines ; extra == 'all'
-  - peft<=0.11.1 ; extra == 'all'
-  - pillow ; extra == 'all'
-  - protobuf ; extra == 'all'
-  - pydantic>2.0.0 ; extra == 'all'
-  - pynvml ; extra == 'all'
-  - safetensors ; extra == 'all'
-  - sentencepiece ; extra == 'all'
-  - shortuuid ; extra == 'all'
-  - tiktoken ; extra == 'all'
-  - torch<=2.3.1,>=2.0.0 ; extra == 'all'
-  - torchvision<=0.18.1,>=0.15.0 ; extra == 'all'
-  - transformers ; extra == 'all'
-  - uvicorn ; extra == 'all'
-  - accelerate ; extra == 'all'
-  - datasets ; extra == 'all'
-  - transformers-stream-generator ; extra == 'all'
-  - gradio ; extra == 'all'
-  - tritonclient[grpc] ; extra == 'all'
-  - nvidia-nccl-cu11 ; extra == 'all'
-  - nvidia-cuda-runtime-cu11 ; extra == 'all'
-  - nvidia-cublas-cu11 ; extra == 'all'
-  - nvidia-curand-cu11 ; extra == 'all'
-  - triton<=2.3.1,>=2.1.0 ; sys_platform == 'linux' and extra == 'all'
-  - accelerate ; extra == 'lite'
-  - datasets ; extra == 'lite'
-  - transformers-stream-generator ; extra == 'lite'
-  - nvidia-nccl-cu11 ; extra == 'lite'
-  - nvidia-cuda-runtime-cu11 ; extra == 'lite'
-  - nvidia-cublas-cu11 ; extra == 'lite'
-  - nvidia-curand-cu11 ; extra == 'lite'
-  - gradio ; extra == 'serve'
-  - protobuf ; extra == 'serve'
-  - tritonclient[grpc] ; extra == 'serve'
-  - nvidia-nccl-cu11 ; extra == 'serve'
-  - nvidia-cuda-runtime-cu11 ; extra == 'serve'
-  - nvidia-cublas-cu11 ; extra == 'serve'
-  - nvidia-curand-cu11 ; extra == 'serve'
 - kind: conda
   name: loguru
   version: 0.7.0
@@ -5289,23 +5173,6 @@ packages:
   size: 10492
   timestamp: 1675543414256
 - kind: conda
-  name: nccl
-  version: 2.21.5.1
-  build: h6103f9b_0
-  subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/nccl-2.21.5.1-h6103f9b_0.conda
-  sha256: 64d0992b9e442f6e92c0fed7584c68bf48d43c741bb589d4afee450d41f805ca
-  md5: 05381b62b2faed9609fb68b27cd575aa
-  depends:
-  - cuda-version >=11.8,<12.0a0
-  - libgcc-ng >=12
-  - libstdcxx-ng >=12
-  license: BSD-3-Clause
-  license_family: BSD
-  purls: []
-  size: 130499160
-  timestamp: 1712267215072
-- kind: conda
   name: ncurses
   version: '6.5'
   build: he02047a_1
@@ -5451,30 +5318,6 @@ packages:
   - pkg:pypi/numpy?source=conda-forge-mapping
   size: 7009070
   timestamp: 1707225917496
-- kind: pypi
-  name: nvidia-cublas-cu11
-  version: 11.11.3.6
-  url: https://download.pytorch.org/whl/cu118/nvidia_cublas_cu11-11.11.3.6-py3-none-manylinux1_x86_64.whl#sha256=39fb40e8f486dd8a2ddb8fdeefe1d5b28f5b99df01c87ab3676f057a74a5a6f3
-  sha256: 39fb40e8f486dd8a2ddb8fdeefe1d5b28f5b99df01c87ab3676f057a74a5a6f3
-  requires_python: '>=3'
-- kind: pypi
-  name: nvidia-cuda-runtime-cu11
-  version: 11.8.89
-  url: https://download.pytorch.org/whl/cu118/nvidia_cuda_runtime_cu11-11.8.89-py3-none-manylinux1_x86_64.whl#sha256=f587bd726eb2f7612cf77ce38a2c1e65cf23251ff49437f6161ce0d647f64f7c
-  sha256: f587bd726eb2f7612cf77ce38a2c1e65cf23251ff49437f6161ce0d647f64f7c
-  requires_python: '>=3'
-- kind: pypi
-  name: nvidia-curand-cu11
-  version: 10.3.0.86
-  url: https://download.pytorch.org/whl/cu118/nvidia_curand_cu11-10.3.0.86-py3-none-manylinux1_x86_64.whl#sha256=ac439548c88580269a1eb6aeb602a5aed32f0dbb20809a31d9ed7d01d77f6bf5
-  sha256: ac439548c88580269a1eb6aeb602a5aed32f0dbb20809a31d9ed7d01d77f6bf5
-  requires_python: '>=3'
-- kind: pypi
-  name: nvidia-nccl-cu11
-  version: 2.21.5
-  url: https://download.pytorch.org/whl/cu118/nvidia_nccl_cu11-2.21.5-py3-none-manylinux2014_x86_64.whl#sha256=49d8350629c7888701d1fd200934942671cb5c728f49acc5a0b3a768820bed29
-  sha256: 49d8350629c7888701d1fd200934942671cb5c728f49acc5a0b3a768820bed29
-  requires_python: '>=3'
 - kind: conda
   name: openai
   version: 1.51.2
@@ -5933,28 +5776,6 @@ packages:
   purls: []
   size: 8252
   timestamp: 1726802366959
-- kind: conda
-  name: py-xgboost
-  version: 2.1.1
-  build: cpu_pyh15c3653_4
-  build_number: 4
-  subdir: noarch
-  noarch: python
-  url: https://conda.anaconda.org/conda-forge/noarch/py-xgboost-2.1.1-cpu_pyh15c3653_4.conda
-  sha256: 698dfb3fe876c4ae83abc2f4b0017eda27af6270105b614e82999e16aeffff92
-  md5: 24de294316b7e31feaff4bc94cfd0501
-  depends:
-  - _py-xgboost-mutex 2.0 cpu_0
-  - libxgboost * cpu_h*_4
-  - libxgboost >=2.1.1,<2.1.2.0a0
-  - numpy
-  - python >=3.9
-  - scikit-learn
-  - scipy
-  license: Apache-2.0
-  license_family: APACHE
-  size: 134436
-  timestamp: 1727635360689
 - kind: conda
   name: py-xgboost
   version: 2.1.1
@@ -7838,23 +7659,6 @@ packages:
   purls: []
   size: 166747860
   timestamp: 1702648807719
-- kind: conda
-  name: xgboost
-  version: 2.1.1
-  build: cpu_pyhac85b48_4
-  build_number: 4
-  subdir: noarch
-  noarch: python
-  url: https://conda.anaconda.org/conda-forge/noarch/xgboost-2.1.1-cpu_pyhac85b48_4.conda
-  sha256: 2e28bf8e2c43cec7822bcb88b65655503ad33a4c1d79f56f3ff3fa48e0f01670
-  md5: 73351a47ad19634281abe4d5e204d34e
-  depends:
-  - py-xgboost 2.1.1 cpu_pyh15c3653_4
-  - python >=3.9
-  license: Apache-2.0
-  license_family: APACHE
-  size: 15228
-  timestamp: 1727635880733
 - kind: conda
   name: xgboost
   version: 2.1.1
